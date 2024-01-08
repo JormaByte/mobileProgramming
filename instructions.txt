@@ -1,0 +1,24 @@
+    
+    Implement an application for adding exercises and showing the exercise history. Use
+navigation of your choice for three different views: adding exercise, viewing list of
+exercises and settings for selecting units. The following examples are just to give the
+basic structure of the layouts. Don’t mimic the style but make your own design. You
+may use basic RN components or some external libraries like RN Paper but come up
+with your own color theme e.g. by using color wheel.
+
+    In the first view user may add workouts. Workout contains sport type (at least three
+different options), distance, duration, and date. The button adds the workout and saves
+it into context containing array of workouts. Check that only numeric values are allowed
+for the distance and duration. Show alert if there’s negative distance/duration. Choose
+the date from calendar dialog.
+
+    Another navigation view displays a list of all added workouts. The list should be
+scrollable. On top of the list the sum distances of different workout types are displayed.
+Add some example workouts into to the workout array, so that there’s already
+some workouts when starting the app.
+
+    The settings view is quite simple but affects some calculations and conditional
+rendering. Use radio buttons to select the units. If user changes to miles, workout
+distance is given as miles => the input miles are converted and saved as kilometers in
+objects. For the workout list all the distances are converted and displayed also in
+corresponding units (round to two decimals in UI).
