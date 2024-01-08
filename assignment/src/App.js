@@ -10,7 +10,7 @@ function App() {
     <div class='app'>
       <h1 class= 'title'>Jormas exercise planner</h1>
     
-      <AddExercise />
+      <AddExercise /> <br/>
       <ExerciseList />
       <Settings />
     </div>
