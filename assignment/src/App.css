@@ -1,12 +1,38 @@
 body{
-  background-color: blueviolet;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: burlywood;
 }
 
 .app{
   width: 50%;
-  height: 250px;
-  margin: 50px;
-  outline: solid 3px black;
-  display: inline;
-  justify-content: ;
+  margin: auto;
+  border: 3px solid pink;
+  padding: 30px;
+  background-color:blanchedalmond;
+  text-align: center;
+
+}
+
+.add{
+  width: 50%;
+  margin: auto;
+  border: 3px solid pink;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+.list{
+  width: 50%;
+  margin: auto;
+  border: 3px solid pink;
+  padding: 40px;
+  background-color: white;
+}
+
+.title{
+  border: 3px solid pink;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: burlywood;
+  
 }

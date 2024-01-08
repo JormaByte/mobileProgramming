@@ -8,8 +8,8 @@ function App() {
   
   return (
     <div class='app'>
-      <h1>Jormas exercise planner</h1>
-      
+      <h1 class= 'title'>Jormas exercise planner</h1>
+    
       <AddExercise />
       <ExerciseList />
       <Settings />
