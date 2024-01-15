@@ -6,12 +6,9 @@ import logo from './assets/jyp.png'
 export default function App() {
 
   const [workoutType, setWorkoutType] = useState("")
-  const [workoutTime, setWorkoutTime] = useState(0)
-  const [date, setDate] = useState("")
-
-  function buttonPressed(){
-
-  }
+  const [workoutTime, setWorkoutTime] = useState("")
+  const [date, setDate] = useState(0)
+  //const [workout, setWorkout] = useState=([])
 
 
   return (
@@ -47,12 +44,16 @@ export default function App() {
       <Text class={'stats'}>Your workout stats: {workoutTime} | {workoutType} | {date}</Text>
 
       
-      <Button title={'Submit your workout'} onClick={buttonPressed}/>
+      <Button title={'Submit your workout'} //onPress={setWorkout}
+      />
 
       <Text>Your previous workouts:</Text>
-      <ScrollView>
-        
-      </ScrollView>
+      
+        <Text>
+          
+        </Text>
+        <Image source={logo}></Image>
+      
 
 
       <StatusBar style="auto" />
