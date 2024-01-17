@@ -57,6 +57,8 @@ function CurrencyView(){
   return (
     <View>
       <Text>Currency converter here</Text>
+      <TextInput style={{borderWidth: 4}} value={euros} onChangeText={setEuros} />
+      <Text>{euros}€ = {Number(euros) * 0.86}£</Text>
     </View>
   );
 }

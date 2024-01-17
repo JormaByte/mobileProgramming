@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, ScrollView, Image, Pressable } from 'react-native';
 import { useState } from 'react';
 import logo from './assets/jyp.png'
 
@@ -18,7 +18,7 @@ export default function App() {
       <Text>Welcome to Jormas workout diary!</Text>
 
       <TextInput
-        style={{borderWidth: 1, padding: 10, width: '85 %'}}
+        style={styles.TextInput}
         placeholder='How long was your workout? (in minutes)'
         keyboardType='number-pad'
         onChangeText={setWorkoutTime}
@@ -26,7 +26,7 @@ export default function App() {
       />
 
        <TextInput
-        style={{borderWidth: 1, padding: 10, width: '85 %'}}
+        style={styles.TextInput}
         placeholder='What did you do? (Jogging/Swimming/Tennis etc..)'
         keyboardType='default'
         onChangeText={setWorkoutType}
@@ -34,7 +34,7 @@ export default function App() {
       />
 
        <TextInput
-        style={{borderWidth: 1, padding: 10, width: '85 %'}}
+        style={styles.TextInput}
         placeholder='When did you work out? (dd.mm.yy)'
         keyboardType='number-pad'
         onChangeText={setDate}
@@ -44,7 +44,7 @@ export default function App() {
       <Text class={'stats'}>Your workout stats: {workoutTime} | {workoutType} | {date}</Text>
 
       
-      <Button title={'Submit your workout'} //onPress={setWorkout}
+      <Button title={'Submit your workout'} onPress={console.log("works")} //onPress={setWorkout}
       />
 
       <Text>Your previous workouts:</Text>
