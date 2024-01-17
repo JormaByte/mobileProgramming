@@ -14,7 +14,7 @@ export default function App() {
         <TextInput style={Styles.textInput} value={fname} onChangeText={setFname}/>
         <Text style={Styles.label} >Last Name</Text>
         <TextInput style={Styles.textInput} value={lname} onChangeText={setLname}/>
-        <TouchableOpacity  onPress={()=>console.log("Submit" + {fname} + {lname})}>
+        <TouchableOpacity  onPress={()=>console.log({fname}, {lname})}>
           <Text style={Styles.button}>SUBMIT</Text>
           <Text>{lname} {fname}</Text>
         </TouchableOpacity> 
