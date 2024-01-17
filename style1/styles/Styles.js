@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
-
-export default StyleSheet.create({
+const darkColor = 'gray'
+const lightTheme = StyleSheet.create({
     container: {
         marginTop: Constants.statusBarHeight+5,
         backgroundColor: '#fbe485',
@@ -50,7 +50,25 @@ export default StyleSheet.create({
         fontSize: 20
     }
 });
-  
+
+const darkTheme = StyleSheet.create({
+    ...lightTheme,
+    container: {
+        ...lightTheme.container,
+        backgroundColor: 'blue'
+    },
+    header: {
+        ...lightTheme.header,
+        color: 'black'
+    },
+    button: {
+        ...lightTheme.button,
+        color: 'black'
+
+    },
+})
+
+export {lightTheme, darkTheme}
 
 
 
