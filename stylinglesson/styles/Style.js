@@ -4,18 +4,18 @@ import Constants from 'react-native'
 
 const Style = StyleSheet.create({
     container:{
-      marginTop: 4,
-      backgroundColor: 'bisque'
+      marginTop: Constants.StatusBarHeight,
+      backgroundColor: 'orange',
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
+      rowGap: 3
     },
-    header:{
-      fontSize: 34,
-      backgroundColor: '#7c1414',
-      borderWidth: 4,
-      borderColor: 'red',
-      borderRadius: 15,
-      padding: 10,
-      margin: 50
-    }
+    label: {
+      backgroundColor: 'yellow'
+    },
+   
+    
 })
 
 export {Style}
