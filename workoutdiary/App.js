@@ -46,6 +46,11 @@ export default function App() {
       
       <Button title={'Submit your workout'} onPress={console.log("works")} //onPress={setWorkout}
       />
+       <TouchableOpacity  onPress={()=> setTheme(lightTheme)}>
+          <Text style={theme.button}>SUBMIT</Text>
+
+          <Text>{lname} {fname}</Text>
+        </TouchableOpacity> 
 
       <Text>Your previous workouts:</Text>
       
