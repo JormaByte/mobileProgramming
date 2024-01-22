@@ -1,63 +1,64 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, ScrollView, Image, Pressable } from 'react-native';
+import { Text, View, Button, TextInput } from 'react-native';
 import { useState } from 'react';
-import logo from './assets/jyp.png'
+import { Calendar } from 'react-native-calendars';
+import SelectDropdown from 'react-native-select-dropdown';
+import styles from './styles/Styles';
+
+const workoutTypes = [
+  {type: 'Running'},
+  {type: 'Walking'},
+  {type: 'Swimming'},
+  {type: 'Tennis'},
+  {type: 'Cycling'}
+]
+
 
 export default function App() {
 
-  const [workoutType, setWorkoutType] = useState("")
-  const [workoutTime, setWorkoutTime] = useState("")
-  const [date, setDate] = useState(0)
+  const [workoutType, setWorkoutType] = useState([0])
+  const [workoutTime, setWorkoutTime] = useState(0)
+  const [date, setDate] = useState()
   //const [workout, setWorkout] = useState=([])
-
+  
+  
 
   return (
     <View style={styles.container}>
-      <Image style={styles.Image} source={logo} />
-
       <Text>Welcome to Jormas workout diary!</Text>
 
+      <Calendar
+        onDayPress={setDate}/>
+        
+          <Text>
+            
+          </Text>
+      
+
       <TextInput
-        style={styles.TextInput}
+        style={styles.textInput}
         placeholder='How long was your workout? (in minutes)'
         keyboardType='number-pad'
         onChangeText={setWorkoutTime}
         value={workoutTime}
       />
 
-       <TextInput
-        style={styles.TextInput}
-        placeholder='What did you do? (Jogging/Swimming/Tennis etc..)'
-        keyboardType='default'
-        onChangeText={setWorkoutType}
-        value={workoutType}
+       <SelectDropdown
+        data={workoutTypes. map(workout => workout.type)}
+        onSelect={setWorkoutType}
       />
 
-       <TextInput
-        style={styles.TextInput}
-        placeholder='When did you work out? (dd.mm.yy)'
-        keyboardType='number-pad'
-        onChangeText={setDate}
-        value={date}
-      />
 
-      <Text class={'stats'}>Your workout stats: {workoutTime} | {workoutType} | {date}</Text>
+      <Text class={'stats'}>Your workout stats: {workoutTime} | {workoutType} | {date ? date.dateString : 'Select date'}</Text>
 
       
       <Button title={'Submit your workout'} onPress={console.log("works")} //onPress={setWorkout}
       />
-       <TouchableOpacity  onPress={()=> setTheme(lightTheme)}>
-          <Text style={theme.button}>SUBMIT</Text>
-
-          <Text>{lname} {fname}</Text>
-        </TouchableOpacity> 
+       
 
       <Text>Your previous workouts:</Text>
       
-        <Text>
-          
-        </Text>
-        <Image source={logo}></Image>
+       
       
 
 
@@ -66,11 +67,3 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
