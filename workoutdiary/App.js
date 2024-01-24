@@ -29,10 +29,7 @@ export default function App() {
 
       <Calendar
         onDayPress={setDate}/>
-        
-          <Text>
-            
-          </Text>
+   
       
 
       <TextInput
@@ -43,13 +40,15 @@ export default function App() {
         value={workoutTime}
       />
 
-       <SelectDropdown
+        <Text> What did you do?</Text>
+       <SelectDropdown 
+       style={styles.dropDown}
         data={workoutTypes. map(workout => workout.type)}
         onSelect={setWorkoutType}
       />
 
 
-      <Text class={'stats'}>Your workout stats: {workoutTime} | {workoutType} | {date ? date.dateString : 'Select date'}</Text>
+      <Text style={styles.stats}>Your workout stats: {workoutTime} | {workoutType} | {date ? date.dateString : 'Select date'}</Text>
 
       
       <Button title={'Submit your workout'} onPress={console.log("works")} //onPress={setWorkout}
