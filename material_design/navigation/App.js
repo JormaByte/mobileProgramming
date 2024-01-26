@@ -24,7 +24,7 @@ function Home({navigation}){
 
   return(
     <View>
-      <TextInput placeholder='WHAT IS YOUR NAME?' onChangeText={setUserName}></TextInput>
+      <TextInput style={styles.text} placeholder='WHAT IS YOUR NAME?' onChangeText={setUserName}></TextInput>
 
       <Button title='Go to the User page' onPress={() => navigation.navigate('User', {userName})} />
       </View>
