@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MessagesContext, UserContext } from './components/context';
-import { MD3LightTheme, PaperProvider } from 'react-native-paper';
+import { Icon, MD3LightTheme, PaperProvider } from 'react-native-paper';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import UserView from './components/UserView';
@@ -15,6 +15,8 @@ export default function App() {
 
   const [username, setUsername] = useState('')
   const [messages, setMessages] = useState([])
+
+  console.log(messages)
 
   return (
     <UserContext.Provider value={{username, setUsername}}>
@@ -35,9 +37,12 @@ function Navigation(){
   return(
     <NavigationContainer>
       <Tab.Navigator tabBarPosition='bottom' style={Style.container}>
-        <Tab.Screen name='user' options={{title: 'User'}} component={UserView} />
-        <Tab.Screen name='addmessage' options={{title: 'Add Message'}}  component={AddMessagesView} />
-        <Tab.Screen name='messages' options={{title: 'Messages'}}  component={MessagesView} />
+        <Tab.Screen name='user' 
+        options={{ title: 'User', tabBarIcon: () => <Icon source= 'account-circle' size={24}/>}} component={UserView} />
+        <Tab.Screen name='addmessage'
+        options={{title: 'Add Message', tabBarIcon: () => <Icon source= 'message' size={24}/>}}  component={AddMessagesView} />
+        <Tab.Screen name='messages' 
+        options={{title: 'Messages', tabBarIcon: () => <Icon source= 'cart' size={24}/>}}  component={MessagesView} />
       </Tab.Navigator>
     </NavigationContainer>
   )
