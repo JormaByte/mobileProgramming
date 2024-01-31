@@ -9,7 +9,7 @@ import UserView from './components/UserView';
 import MessagesView from './components/MessagesView';
 import AddMessagesView from './components/AddMessageView';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Style from './styles/Style';
+import Style, { MyTheme } from './styles/Style';
 
 export default function App() {
 
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <UserContext.Provider value={{username, setUsername}}>
       <MessagesContext.Provider value={{messages, setMessages}}>
-        <PaperProvider theme={MD3LightTheme}>
+        <PaperProvider theme={MyTheme}>
           <SafeAreaProvider>
             <Navigation />
           </SafeAreaProvider>

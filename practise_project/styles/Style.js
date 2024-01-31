@@ -1,4 +1,5 @@
 import { StatusBar, StyleSheet } from "react-native"
+import { MD3LightTheme } from "react-native-paper"
 
 export default Style = StyleSheet.create({
     container:{
@@ -17,3 +18,13 @@ export default Style = StyleSheet.create({
     }
 
 })
+
+export const MyTheme = {
+    ...MD3LightTheme,
+    roundness: 2,
+    colors: {
+        ...MD3LightTheme.colors,
+        primary: 'brown',
+        surfaceVariant: 'pink'
+    }
+}
