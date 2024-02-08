@@ -3,16 +3,14 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: 'bisque'
   },
   header: {
     marginTop: 200,
-    marginBottom: 15,
     backgroundColor: 'skyblue',
     flexDirection: 'row',
   },
   footer: {
-    marginTop: 20,
     backgroundColor: 'skyblue',
     flexDirection: 'row'
   },

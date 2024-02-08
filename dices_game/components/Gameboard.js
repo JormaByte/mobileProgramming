@@ -14,6 +14,7 @@ export const Gameboard = () => {
     const [numOfWins, setNumOfWins] = useState(0)
     const [sum, setSum] = useState(0)
     const [status, setStatus] = useState('')
+    const [highScore, setHighScore] = useState(0)
 
 /* throwDices() function for throwing dices and setting values of state variables
 according to progress of the game. */
@@ -27,12 +28,21 @@ according to progress of the game. */
         setNumOfThrowsLeft(numOfThrowsLeft - 1)
         setSum(sum)
         checkWinner()
+        checkHighScore()
         if (numOfThrowsLeft === NUM_OF_THROWS) {
             setStatus('The game has not started yet')
         }
         if (numOfThrowsLeft < 0) {
             setNumOfThrowsLeft(NUM_OF_THROWS - 1)
             setNumOfWins(0)
+        }
+    }
+
+    const checkHighScore = () => {
+
+        if (numOfThrowsLeft === 0 && numOfWins > highScore ){
+            setHighScore(numOfWins)
+            setStatus('NEW HIGH SCORE')
         }
     }
 
@@ -49,7 +59,8 @@ variables according to status of the game. */
         }
         else if (numOfThrowsLeft === 0) {
             setStatus('GAME OVER')
-        }
+        } 
+
         else {
             setStatus('Keep on throwing, cowboy!')
         }
@@ -71,6 +82,7 @@ variables according to status of the game. */
 return(
     <View style={styles.gameboard}>
         <View style={styles.flex}>{row}</View>
+        <Text>HIGH SCORE: {highScore}</Text>
         <Text style={styles.gameinfo}>Sum: {sum}</Text>
         <Text style={styles.gameinfo}>Throws left: {numOfThrowsLeft}</Text>
         <Text style={styles.gameinfo}>Number of wins: {numOfWins}</Text>
