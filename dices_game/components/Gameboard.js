@@ -70,6 +70,18 @@ variables according to status of the game. */
         }
     }
 
+    const row = []
+    for (let i = 0; i < NUM_OF_DICES; i++) {
+        row.push(
+            <MaterialCommunityIcons
+            name={board[i]}
+            key={'row' + 1}
+            size={50}
+            color={'steelblue'}>
+            </MaterialCommunityIcons>
+        )
+    }
+
 /* handling the change of nbrOfThrowsLeft value that is state variable. The hook will be called if value of
     nbrOfThrowsLeft change. */
 /*     useEffect(() => {
@@ -102,14 +114,3 @@ return(
 )
 }
 
-const row = []
-for (let i = 0; i < NUM_OF_DICES; i++) {
-    row.push(
-        <MaterialCommunityIcons
-        name={board[i]}
-        key={'row' + 1}
-        size={50}
-        color={'steelblue'}>
-        </MaterialCommunityIcons>
-    )
-}
