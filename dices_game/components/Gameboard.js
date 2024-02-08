@@ -38,6 +38,10 @@ according to progress of the game. */
         }
     }
 
+/*
+    Added a high score function that checks if the number of wins is bigger
+    than the previous high score. If so; numOfWins is saved to highScore state variable.
+*/
     const checkHighScore = () => {
 
         if (numOfThrowsLeft === 0 && numOfWins > highScore ){
