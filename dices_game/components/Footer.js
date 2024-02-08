@@ -5,7 +5,7 @@ export const Footer = () => {
     return(
         <View style={styles.footer}>
             <Text style={styles.title}>
-                Author: J. Sonni
+                Author: Joel Oksanen
             </Text>
         </View>
     )
