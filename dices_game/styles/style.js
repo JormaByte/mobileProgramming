@@ -62,5 +62,10 @@ export default StyleSheet.create({
   buttonText: {
     color:"#2B2B52",
     fontSize: 20
+  },
+  highscore: {
+    color: 'orange',
+    fontWeight: 'bold',
+    fontSize: 20
   }
 });

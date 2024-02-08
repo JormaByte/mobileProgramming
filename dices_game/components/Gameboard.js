@@ -98,7 +98,7 @@ variables according to status of the game. */
 return(
     <View style={styles.gameboard}>
         <View style={styles.flex}>{row}</View>
-        <Text>HIGH SCORE: {highScore}</Text>
+        <Text style={styles.highscore}>HIGH SCORE: {highScore}</Text>
         <Text style={styles.gameinfo}>Sum: {sum}</Text>
         <Text style={styles.gameinfo}>Throws left: {numOfThrowsLeft}</Text>
         <Text style={styles.gameinfo}>Number of wins: {numOfWins}</Text>
