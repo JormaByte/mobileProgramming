@@ -3,6 +3,7 @@ import { Button, Text, TextInput } from 'react-native-paper'
 import { MessagesContext, UserContext } from './context'
 import { View } from 'react-native'
 import Style from '../styles/Style'
+import { Calendar } from 'react-native-calendars';
 
 export default function AddMessagesView(){
 
@@ -27,8 +28,10 @@ export default function AddMessagesView(){
             <Text variant='headlineLarge'>{header}</Text>
             { username !== '' &&
                 <View>
+                    <Calendar onDayPress={setDate}/>
                     <TextInput label={'Message'} value={msg} onChangeText={setMsg} />
                     <Button mode='outlined' onPress={addMessage}></Button>
+                    
                 </View>
             }
         </View>

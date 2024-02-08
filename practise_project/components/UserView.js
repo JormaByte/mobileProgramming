@@ -16,7 +16,7 @@ export default function UserView(){
     function changeUser(){
         setUsername(name)
         
-        Alert.alert('User changed to ' + name)
+        Alert.alert('Unit changed to ' + name)
         setName('')
     }
     

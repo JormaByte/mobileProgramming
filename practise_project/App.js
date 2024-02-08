@@ -10,6 +10,7 @@ import MessagesView from './components/MessagesView';
 import AddMessagesView from './components/AddMessageView';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Style, { MyTheme } from './styles/Style';
+import { Calendar } from 'react-native-calendars';
 
 export default function App() {
 
@@ -37,12 +38,19 @@ function Navigation(){
   return(
     <NavigationContainer>
       <Tab.Navigator tabBarPosition='bottom' style={Style.container}>
-        <Tab.Screen name='user' 
-        options={{ title: 'User', tabBarIcon: () => <Icon source= 'account-circle' size={24}/>}} component={UserView} />
-        <Tab.Screen name='addmessage'
-        options={{title: 'Add Message', tabBarIcon: () => <Icon source= 'message' size={24}/>}}  component={AddMessagesView} />
-        <Tab.Screen name='messages' 
-        options={{title: 'Messages', tabBarIcon: () => <Icon source= 'cart' size={24}/>}}  component={MessagesView} />
+
+      <Tab.Screen name='addworkout'
+        options={{title: 'Add workout', tabBarIcon: () => 
+        <Icon source= 'plus' size={24}/>}}  component={AddMessagesView} />
+       
+        <Tab.Screen name='workouts' 
+        options={{title: 'Workouts', tabBarIcon: () => 
+        <Icon source= 'circle' size={24}/>}}  component={MessagesView} />
+
+        <Tab.Screen name='settings' 
+        options={{ title: 'Settings', tabBarIcon: () => 
+        <Icon source= 'cog' size={24}/>}} component={UserView} />
+
       </Tab.Navigator>
     </NavigationContainer>
   )
