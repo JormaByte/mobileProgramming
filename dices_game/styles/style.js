@@ -67,5 +67,10 @@ export default StyleSheet.create({
     color: 'orange',
     fontWeight: 'bold',
     fontSize: 20
+  },
+  rules : {
+    fontWeight: 'bold',
+    fontSize: 17,
+    margin: 5
   }
 });

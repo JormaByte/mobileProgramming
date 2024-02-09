@@ -6,7 +6,7 @@ import styles from '../styles/style'
 let board = []
 const NUM_OF_DICES = 5
 const NUM_OF_THROWS = 5
-const WINNING_POINTS = 23
+const WINNING_POINTS = 21
 
 export const Gameboard = () => {
 
@@ -97,6 +97,7 @@ variables according to status of the game. */
 
 return(
     <View style={styles.gameboard}>
+        <Text style={styles.rules}>Score at least 21 to win!</Text>
         <View style={styles.flex}>{row}</View>
         <Text style={styles.highscore}>HIGH SCORE: {highScore}</Text>
         <Text style={styles.gameinfo}>Sum: {sum}</Text>
